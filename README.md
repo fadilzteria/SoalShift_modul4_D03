@@ -29,15 +29,15 @@ Perhatian: Karakter ‘/’ adalah karakter ilegal dalam penamaan file atau fold
 Semua file video yang tersimpan secara terpecah-pecah (splitted) harus secara otomatis tergabung (joined) dan diletakkan dalam folder “Videos”
 Urutan operasi dari kebutuhan ini adalah:
 1.Tepat saat sebelum file system di-mount
-  a.Secara otomatis folder “Videos” terbuat di root directory file system
-  b.Misal ada sekumpulan file pecahan video bernama “computer.mkv.000”, “computer.mkv.001”, “computer.mkv.002”, dst. Maka secara          otomatis file pecahan tersebut akan di-join menjadi file video “computer.mkv”
-  c.Untuk mempermudah kalian, dipastikan hanya video file saja yang terpecah menjadi beberapa file.
-  d.Karena mungkin file video sangat banyak sehingga mungkin saja saat menggabungkan file video, file system akan membutuhkan waktu yang lama untuk sukses ter-mount. Maka pastikan saat akan menggabungkan file pecahan video, file system akan membuat **1 thread/proses(fork) baru** yang dikhususkan untuk menggabungkan file video tersebut
-  e.Pindahkan seluruh file video yang sudah ter-join ke dalam folder “Videos”
-  f.Jangan tampilkan file pecahan di direktori manapun
+..1.Secara otomatis folder “Videos” terbuat di root directory file system
+..2.Misal ada sekumpulan file pecahan video bernama “computer.mkv.000”, “computer.mkv.001”, “computer.mkv.002”, dst. Maka secara          otomatis file pecahan tersebut akan di-join menjadi file video “computer.mkv”
+..3.Untuk mempermudah kalian, dipastikan hanya video file saja yang terpecah menjadi beberapa file.
+..4.Karena mungkin file video sangat banyak sehingga mungkin saja saat menggabungkan file video, file system akan membutuhkan waktu yang lama untuk sukses ter-mount. Maka pastikan saat akan menggabungkan file pecahan video, file system akan membuat **1 thread/proses(fork) baru** yang dikhususkan untuk menggabungkan file video tersebut
+..5.Pindahkan seluruh file video yang sudah ter-join ke dalam folder “Videos”
+..6.Jangan tampilkan file pecahan di direktori manapun
 2.Tepat saat file system akan di-unmount
-  a.Hapus semua file video yang berada di folder “Videos”, tapi jangan hapus file pecahan yang terdapat di root directory file system
-  b.Hapus folder “Videos” 
+..1.Hapus semua file video yang berada di folder “Videos”, tapi jangan hapus file pecahan yang terdapat di root directory file system
+..2.Hapus folder “Videos” 
 
 
 ### Penyelesaian :
